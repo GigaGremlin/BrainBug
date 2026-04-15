@@ -9,6 +9,6 @@
 ## Local LLM & TTS+STT to use with VoiceAssistant, Home Assistant and ESPHome
 
 ---
-text here
+**The code will be available here shortly.**
 
 
