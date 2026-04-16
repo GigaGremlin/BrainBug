@@ -50,9 +50,9 @@ Wer mag kann sich meine Version hier ansehen und selber ausprobieren.<br>
 
 | Version | Typ | Modell / Engine | Download |
 | :--- | :--- | :--- | :--- |
-| **v1.0** | 🧠 Pure Brain | Llama 3.2:3b für XL Kontextfenster | [📦 YAML](#) |
-| **v1.1** | 🎙 Full Voice | Llama 3.2 + Whisper & Piper | [📦 YAML](#) | 
-| **v2.0-beta** | 🚀 1-Bit Turbo | **New: BitNet-Modell** | [📦 YAML](#) |
+| **v1.0** | 🧠 Pure Brain | Llama 3.2:3b für XL Kontextfenster | [📦 LLM-only.sh](BrainBug/BrainBug-Startdateien/LLM-only.sh) |
+| **v1.1** | 🎙 Full Voice | Llama 3.2 + Whisper & Piper | [📦 LLM-TTS-STT.sh](BrainBug/BrainBug-Startdateien/LLM-TTS-STT.sh) |
+| **v2.0-beta** | 🚀 1-Bit Turbo | **New: BitNet-Modell** | [📦 soon...](#) |
 
 <!-- > **Neu:** Du hast ein neues Modell gefunden? Einfach eine neue Zeile in der Tabelle oben einfügen!-->
 
