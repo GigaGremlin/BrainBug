@@ -11,11 +11,40 @@
 
 ---
 
-## 📌 Das Konzept
-BrainBug ist eine modulare KI-Zentrale für Dein Smart Home. Dank des **NVIDIA Jetson Orin Nano** und moderner **1-Bit Modelle** realisieren wir hier High-End Performance auf lokaler Hardware.
+## 📌 Das Konzept<br>
+Da ich für mein Home Assistant und die verbundenen **Voice Assistenten** gerne eine
+lokale Ki nutzen wollte, ist dieses Projekt entstanden.<br>
+**BrainBug** ist als KI-Zentrale für mein Smart Home gedacht. <br>Dank des **NVIDIA Jetson Orin Nano** und moderner **LLM Modelle** ist es möglich High-End Performance auf lokaler Hardware zu realisieren.
 
 ---
 
+
+## 🚀 Warum lokal? (Der "Nanny-Filter" & Cloud-Fehler)<br>
+Die Cloud-Lösung von Nabu Casa neigt in meinem Netz zu Fehlern: `Media reader encountered an error: ESP_FAIL`. 
+**BrainBug** eliminiert diese Latenz und umgeht unnötige Filterfunktionen, die nur Rechenleistung fressen.
+
+
+---
+
+
+## 📘 Dokumentation & Setup<br>
+Natürlich ist meine Version nicht bloß die nackte Platine, welche von einer TF-Speicherkarte gebootet wird. 
+Ich habe mir die Mühe gemacht den NANO mit einer 1TB NVMe auszurüsten und diese bootfähig zu machen.
+Da der Aufbau einer Ki mit nur 8GB gelinde gesagt eine sportliche Herausforderung ist, setze ich für die Zukunft, auf die neuen **1Bit Modelle** die jetzt gerade erscheinen und eine phänomenale Performance bei geringstem VRAM-Bedarf realisieren!<br>Ich nur empfehlen die ersten Gehversuche mit einer TF-Speicherkarte und einer Größe ab **64GB** zu beginnen! Da eine **bootfähige** Speicherkarte einfacher wieder herzustellen ist als die NVMe. Bei mir hat es 8 Versuche gebraucht, bis ich eine Brauchbare Lösung hatte. Ich habe zunächst verschiedene LLM-Modelle ausprobiert, bin aber immer wieder an der Sprachbarriere und Kompatibilität mit Home Assistant gescheitert. Die Open WebUi habe ich zu Gunsten von **AnythingLLM** wieder abgeschaltet, genau wie den **Ubuntu Desktop** da ich so den extra Container und Arbeitsspeicher sparen kann. Gerne hätte ich einfach eine “unzensierte“ LLM Version verwendet, da diese nicht erst jede Anfrage durch ihre Sicherheitsfilter überprüfen muss. Die Leute verstehen scheinbar nicht wieviel Zeit für diesen Mist verlorengeht und wie groß der extra Rechenaufwand für eine **Nanni-Funktion** ist! <br> Leider gibt es aber nicht viele Modelle die sich gut für die Home Assistant Integration eignen, unzensiert sind und Deutsch sprechen.<br>
+Da sich durch die **Updateflut** von HA seit einigen Wochen **alles was an TTS & STT über HA Cloud** läuft, permanent verschlechtert, habe ich mich dazu entschlossen meinen Jetson Nano diese Funktion ebenfalls erfüllen zu lassen!<br>**Und ja, das geht!** - Weil in meiner Konfiguration **TTS und STT, nur über die CPU und nicht im VRAM** laufen! Daher ist der momentane Stand, für den regulären Betrieb, bei meinem Gerät **Ollama3.2:3b + STT & TTS** in einem Docker Container.<br>
+
+Wer mag kann sich meine Version hier ansehen und selber ausprobieren.<br>
+<br>
+
+<img width="1431" height="883" alt="DockerTTS (1)" src="https://github.com/user-attachments/assets/c0668110-d313-4fec-8a30-a7553ddab429" /><br>
+
+<br><br>
+
+<img width="1428" height="879" alt="J-Top (1)" src="https://github.com/user-attachments/assets/6a92a33a-c912-4f95-91bc-36461bcb0fe1" /><br>
+
+<br><br>
+
+---
 ## 🛠 Konfigurations-Archiv (Firmware & YAMLs)
 *Hier findest Du alle aktuellen und vergangenen Versionen. Wähle die passende Konfiguration für Dein Setup:*
 
@@ -25,46 +54,19 @@ BrainBug ist eine modulare KI-Zentrale für Dein Smart Home. Dank des **NVIDIA J
 | **v1.1** | 🎙 Full Voice | Llama 3.2 + Whisper & Piper | [📦 YAML](#) | 
 | **v2.0-beta** | 🚀 1-Bit Turbo | **New: BitNet-Modell** | [📦 YAML](#) |
 
-<!--> **Neu:** Du hast ein neues Modell gefunden? Einfach eine neue Zeile in der Tabelle oben einfügen!-->
-
----
-
-## 📘 Dokumentation & Setup
-
-...kommt noch...
-<!--<details>
-<summary><b>1. Hardware-Vorbereitung (NVMe & Jetson) - [Klicken zum Ausklappen]</b></summary>
-<br>
-Hier beschreibst Du den NVMe-Bootvorgang, das Flashen und die Hardware-Besonderheiten.
-</details>
-
-<!--<details>
-<summary><b>2. Software-Installation (Docker & Ollama) - [Klicken zum Ausklappen]</b></summary>
-<br>
-Schritt-für-Schritt Anleitung zur Installation der Container und der 1-Bit Modelle.
-</details>
-
-<details>
-<summary><b>3. Home Assistant Integration - [Klicken zum Ausklappen]</b></summary>
-<br>
-Wie du die BrainBug-IP in HA einbindest und die Voice-Pipeline konfigurierst.
-</details>-->
-
----
-
-## 🚀 Warum lokal? (Der "Nanny-Filter" & Cloud-Fehler)
-Die Cloud-Lösung von Nabu Casa neigt zu Fehlern: `Media reader encountered an error: ESP_FAIL`. 
-BrainBug eliminiert diese Latenz und umgeht unnötige Sicherheitsfilter, die nur Rechenleistung fressen.
+<!-- > **Neu:** Du hast ein neues Modell gefunden? Einfach eine neue Zeile in der Tabelle oben einfügen!-->
 
 ---
 
 ## 📺 Media & Tutorials
+YouTube Video folgt...
+
 <!--[![YouTube Video](https://img.shields.io/badge/YouTube-Video--Tutorial-red?style=for-the-badge&logo=youtube&logoColor=white)](HIER_DEINEN_YOUTUBE_LINK_EINSETZEN)   -->
 
----
 
+---
 ## 🔗 Community & Links
-👉 **[Ebenfalls als Ki-Projekt auf gigagremlin.de](https://gigagremlin.de/brainbug-2026)**
+👉 **[Gibt es natürlich ebenfalls als Ki-Projekt auf gigagremlin.de / gigagremlin.com](https://gigagremlin.de/brainbug-2026)**
 
 ---
 <div align="center">
