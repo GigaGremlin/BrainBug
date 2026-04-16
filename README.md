@@ -12,12 +12,12 @@
 ---
 
 ## 📌 Das Konzept
-BrainBug ist eine modulare KI-Zentrale für dein Smart Home. Dank des **NVIDIA Jetson Orin Nano** und moderner **1-Bit Modelle** realisieren wir hier High-End Performance auf lokaler Hardware.
+BrainBug ist eine modulare KI-Zentrale für Dein Smart Home. Dank des **NVIDIA Jetson Orin Nano** und moderner **1-Bit Modelle** realisieren wir hier High-End Performance auf lokaler Hardware.
 
 ---
 
 ## 🛠 Konfigurations-Archiv (Firmware & YAMLs)
-*Hier findest du alle aktuellen und vergangenen Versionen. Wähle die passende Konfiguration für dein Setup:*
+*Hier findest Du alle aktuellen und vergangenen Versionen. Wähle die passende Konfiguration für Dein Setup:*
 
 | Version | Typ | Modell / Engine | Download |
 | :--- | :--- | :--- | :--- |
@@ -35,7 +35,7 @@ BrainBug ist eine modulare KI-Zentrale für dein Smart Home. Dank des **NVIDIA J
 <!--<details>
 <summary><b>1. Hardware-Vorbereitung (NVMe & Jetson) - [Klicken zum Ausklappen]</b></summary>
 <br>
-Hier beschreibst du den NVMe-Bootvorgang, das Flashen und die Hardware-Besonderheiten.
+Hier beschreibst Du den NVMe-Bootvorgang, das Flashen und die Hardware-Besonderheiten.
 </details>
 
 <!--<details>
