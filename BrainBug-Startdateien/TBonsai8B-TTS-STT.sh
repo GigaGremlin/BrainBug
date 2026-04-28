@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Skript gestartet am: $(date)" >> /home/pi/debug_start.log
+echo "Skript gestartet am: $(date)" >> /home/GG/debug_start.log
 # Das entzieht Docker die Grundlage, den Container neu zu erstellen
 docker rmi ollama/ollama:latest
 # --- Home Assistant Einstellungen ---   <-- Optional
@@ -19,18 +19,18 @@ while sudo lsof -i :11434; do
     sudo fuser -k 11434/tcp 2>/dev/null
     sleep 2
 done
-echo "Port 11434 ist FREI." >> /home/pi/ki_status.log
+echo "Port 11434 ist FREI." >> /home/GG/ki_status.log
 
 # 4. Desktop stoppen für max. VRAM (Wichtig für Jetson!)
 sudo systemctl stop gdm
 sudo loginctl terminate-seat seat0
 sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 
-# 5. Whisper & Piper sauber neu starten
-docker rm -f GG-Whisper GG-Piper 2>/dev/null
-echo "Starte Audio-Dienste (Whisper/Piper)..."
+# 5. Whisper & GGper sauber neu starten
+docker rm -f GG-Whisper GG-GGper 2>/dev/null
+echo "Starte Audio-Dienste (Whisper/GGper)..."
 docker run -d --name GG-Whisper --network host --restart unless-stopped -v wyoming-whisper-gg-data:/data rhasspy/wyoming-whisper:latest --model base --language de --uri tcp://0.0.0.0:10300
-docker run -d --name GG-Piper --network host --restart unless-stopped -v wyoming-piper-gg-data:/data rhasspy/wyoming-piper:latest --voice de_DE-thorsten-high --uri tcp://0.0.0.0:10200
+docker run -d --name GG-GGper --network host --restart unless-stopped -v wyoming-GGper-gg-data:/data rhasspy/wyoming-GGper:latest --voice de_DE-thorsten-high --uri tcp://0.0.0.0:10200
 
 # --- AB HIER STARTET DIE SCHLEIFE FÜR DEN LLAMA-SERVER ---
 while true; do
@@ -48,24 +48,24 @@ while true; do
         sudo fuser -k 11434/tcp 2>/dev/null
         sleep 2
     done
-    echo "Port 11434 ist FREI." >> /home/pi/ki_status.log
+    echo "Port 11434 ist FREI." >> /home/GG/ki_status.log
 
 	# 9. Status-Update an Home Assistant
-	curl -X POST -H "Authorization: Bearer $HA_TOKEN" -H "Content-Type: application/json" -d '{"state": "Bonsai-Server wird gestartet"}' "http://$HA_IP:8123/api/states/$HA_ENTITY" > /dev/null 2>&1
+	curl -X POST -H "Authorization: Bearer $HA_TOKEN" -H "Content-Type: application/json" -d '{"state": "Bonsai-Server wird gestartet"}' "http://$HA_IP:8123/aGG/states/$HA_ENTITY" > /dev/null 2>&1
 
 	# 10. Native llama-server (Bonsai) starten
 	pkill -9 llama-server 2>/dev/null
 	sleep 2
 	echo "Starte Ternary-Bonsai auf GPU..."
-	nohup /home/pi/llama.cpp/build/bin/llama-server \
-	  -m /home/pi/models/Ternary-Bonsai-8B-Q2_0.gguf \
+	nohup /home/GG/llama.cpp/build/bin/llama-server \
+	  -m /home/GG/models/Ternary-Bonsai-8B-Q2_0.gguf \
 	  --n-gpu-layers 99 \
 	  --ctx-size 8192 \
 	  --host 0.0.0.0 \
-	  --port 11434 > /home/pi/llama_server.log 2>&1 &
+	  --port 11434 > /home/GG/llama_server.log 2>&1 &
 
-	echo "--- SYSTEM BEREIT ---" >> /home/pi/ki_status.log
-	echo "tail -f /home/pi/llama_server.log <--> und <--> zum beenden tail -f"
+	echo "--- SYSTEM BEREIT ---" >> /home/GG/ki_status.log
+	echo "tail -f /home/GG/llama_server.log <--> und <--> zum beenden tail -f"
 
 	# Pause bis zum nächsten automatischen Aufräumen
 	sleep 1200
