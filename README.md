@@ -45,10 +45,10 @@ Wer mag kann sich meine verschiedenen Versionen hier ansehen und selber ausprobi
 <br><br>
 ## 🔥👍👍👍  Meine aktuelle Konfiguration & klare Empfehlung<br>
 ...ist die Verwendung des 'Ternary-Bonsai-8B-gguf'❗ Wie man auf dem Screenshot gut sehen kann verbraucht es sogar weniger Recourcen 
-als mein altes Llama 3.2:3b und das für ein 8B Modell, welches normalerweise den VRAM sprengen würde‼️
+als mein altes Llama 3.2:3b und das für ein 8B Modell, welches normalerweise den VRAM sprengen würde‼️<br>
 Hier ist der Hugging Face-Link für das 1.58Bit Modell: (https://huggingface.co/prism-ml/Ternary-Bonsai-8B-gguf/) <br>
-Der einzige Wermutstropfen bei der Sache ist, dass es die Installation von Lama.cpp, zum laden des Modells, erfordert.
-Womit das Ternary-Bonsai-8B dann auch **nicht** in einem Doker Container läuft. Doch das Ergebnis ist den Aufwand wert😁 
+Der einzige Wermutstropfen bei der Sache ist, dass es die Installation von Lama.cpp, zum laden des Modells, erfordert. <br>
+Womit das Ternary-Bonsai-8B dann auch **nicht** in einem Doker Container läuft. <br> Doch das Ergebnis ist den Aufwand wert😁 
 
 <br>
 <img width="1400" height="800" alt="Ternary-Bonsai-8B (1 58-bit)" src="https://github.com/user-attachments/assets/140e9872-1262-40c6-8f47-cc11b712c117" />
