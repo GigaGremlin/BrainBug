@@ -33,7 +33,7 @@ Ich habe mir die Mühe gemacht den NANO mit einer 1TB NVMe auszurüsten und dies
 Da der Aufbau einer Ki mit nur 8GB gelinde gesagt eine sportliche Herausforderung ist, setze ich für die Zukunft, auf die neuen **1Bit Modelle** die jetzt gerade erscheinen und eine phänomenale Performance bei geringstem VRAM-Bedarf realisieren!<br>Ich nur empfehlen die ersten Gehversuche mit einer TF-Speicherkarte und einer Größe ab **64GB** zu beginnen! Da eine **bootfähige** Speicherkarte einfacher wieder herzustellen ist als die NVMe. Bei mir hat es 8 Versuche gebraucht, bis ich eine Brauchbare Lösung hatte. Ich habe zunächst verschiedene LLM-Modelle ausprobiert, bin aber immer wieder an der Sprachbarriere und Kompatibilität mit Home Assistant gescheitert. Die Open WebUi habe ich zu Gunsten von **AnythingLLM** wieder abgeschaltet, genau wie den **Ubuntu Desktop** da ich so den extra Container und Arbeitsspeicher sparen kann. Gerne hätte ich einfach eine “unzensierte“ LLM Version verwendet, da diese nicht erst jede Anfrage durch ihre Sicherheitsfilter überprüfen muss. Die Leute verstehen scheinbar nicht wieviel Zeit für diesen Mist verlorengeht und wie groß der extra Rechenaufwand für eine **Nanni-Funktion** ist! <br> Leider gibt es aber nicht viele Modelle die sich gut für die Home Assistant Integration eignen, unzensiert sind und Deutsch sprechen.<br>
 Da sich durch die **Updateflut** von HA seit einigen Wochen **alles was an TTS & STT über HA Cloud** läuft, permanent verschlechtert, habe ich mich dazu entschlossen meinen Jetson Nano diese Funktion ebenfalls erfüllen zu lassen!<br>**Und ja, das geht!** - Weil in meiner Konfiguration **TTS und STT, nur über die CPU und nicht im VRAM** laufen! Daher ist der momentane Stand, für den regulären Betrieb, bei meinem Gerät **Ollama3.2:3b + STT & TTS** in einem Docker Container.<br>
 
-Wer mag kann sich meine Version hier ansehen und selber ausprobieren.<br>
+Wer mag kann sich meine verschiedenen Versionen hier ansehen und selber ausprobieren.<br>
 <br>
 
 <img width="1431" height="883" alt="DockerTTS (1)" src="https://github.com/user-attachments/assets/c0668110-d313-4fec-8a30-a7553ddab429" /><br>
@@ -43,7 +43,18 @@ Wer mag kann sich meine Version hier ansehen und selber ausprobieren.<br>
 <img width="1428" height="879" alt="J-Top (1)" src="https://github.com/user-attachments/assets/6a92a33a-c912-4f95-91bc-36461bcb0fe1" /><br>
 
 <br><br>
+## 🔥👍👍👍  Meine aktuelle Konfiguration & klare Empfehlung<br>
+...ist die Verwendung des 'Ternary-Bonsai-8B-gguf'❗ Wie man auf dem Screenshot gut sehen kann verbraucht es sogar weniger Recourcen 
+als mein altes Llama 3.2:3b und das für ein 8B Modell, welches normalerweise den VRAM sprengen würde‼️
+Hier ist der GitHub-Link für das 1.58Bit Modell: (https://huggingface.co/prism-ml/Ternary-Bonsai-8B-gguf/) <br>
+Der einzige Wermutstropfen bei der Sache ist, dass es die Installation von Lama.cpp, zum laden des Modells, erfordert.
+Womit das Ternary-Bonsai-8B dann auch **nicht** in einem Doker Container läuft. Doch das Ergebnis ist den Aufwand wert😁 
 
+<br>
+<img width="1400" height="800" alt="Ternary-Bonsai-8B (1 58-bit)" src="https://github.com/user-attachments/assets/140e9872-1262-40c6-8f47-cc11b712c117" />
+<!-- > <img width="817" height="512" alt="Ternary-Bonsai-8B (1 58-bit)" src="https://github.com/user-attachments/assets/140e9872-1262-40c6-8f47-cc11b712c117" /> -->
+
+<br><br>
 ---
 ## 🛠 Konfigurations-Archiv (Firmware & YAMLs)
 *Hier findest Du alle aktuellen und vergangenen Versionen. Wähle die passende Konfiguration für Dein Setup:*
@@ -52,7 +63,7 @@ Wer mag kann sich meine Version hier ansehen und selber ausprobieren.<br>
 | :--- | :--- | :--- | :--- |
 | **v1.0** | 🧠 Pure Brain | Llama 3.2:3b für XL Kontextfenster | [📦 LLM-only.sh](BrainBug-Startdateien/LLM-only.sh) |
 | **v1.1** | 🎙 Full Voice | Llama 3.2 + Whisper & Piper | [📦 LLM-TTS-STT.sh](BrainBug-Startdateien/LLM-TTS-STT.sh) |
-| **v2.0-beta** | 🚀 1-Bit Turbo | **New: BitNet-Modell** | [📦 soon...](#) |
+| **v2.0** | 🚀 1.58-Bit Model | **New: Prism ML- Model** | [📦 LLM-TTS-STT.sh](BrainBug-Startdateien/TBonsai8B-TTS-STT.sh) |
 
 <!-- > **Neu:** Du hast ein neues Modell gefunden? Einfach eine neue Zeile in der Tabelle oben einfügen!-->
 
