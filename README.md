@@ -84,10 +84,19 @@ YouTube Video folgt...
 
 
 ---
+
 ## 🔗 Community & Links
 👉 **[Gibt es natürlich ebenfalls als Ki-Projekt auf gigagremlin.de / gigagremlin.com](https://gigagremlin.de/brainbug-2026)**
 
 ---
+
 <div align="center">
 <i>Zuletzt aktualisiert: April 2026</i>
+</div>
+
+</div></div>   
+<div align="center">
+   <a href="https://gigagremlin.de">
+    <img src="https://img.shields.io/badge/Made%20by-GigaGremlin-blue?style=for-the-badge" alt="GigaGremlin Website" />
+  </a>
 </div>
