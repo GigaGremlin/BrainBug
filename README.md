@@ -18,6 +18,14 @@ lokale Ki nutzen wollte, ist dieses Projekt entstanden.<br>
 
 ---
 
+<div align="center">
+  <img width="44%" alt="20260422_small" src="https://github.com/user-attachments/assets/21b7497a-10cf-4335-8f1d-a733c6affaa8" />
+  <img width="40%" alt="20260422_small2" src="https://github.com/user-attachments/assets/2ee28d09-5d3a-4ce1-8ec4-ee3df2104ba0" />
+</div>
+
+
+---
+
 
 ## 🚀 Warum lokal? (Der "Nanny-Filter" & Cloud-Fehler)<br>
 Die Cloud-Lösung von Nabu Casa neigt in meinem Netz zu Fehlern: `Media reader encountered an error: ESP_FAIL`. 
