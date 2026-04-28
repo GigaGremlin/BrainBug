@@ -71,7 +71,7 @@ Womit das Ternary-Bonsai-8B dann auch **nicht** in einem Doker Container läuft.
 | :--- | :--- | :--- | :--- |
 | **v1.0** | 🧠 Pure Brain | Llama 3.2:3b für XL Kontextfenster | [📦 LLM-only.sh](BrainBug-Startdateien/LLM-only.sh) |
 | **v1.1** | 🎙 Full Voice | Llama 3.2 + Whisper & Piper | [📦 LLM-TTS-STT.sh](BrainBug-Startdateien/LLM-TTS-STT.sh) |
-| **v2.0** | 🚀 1.58-Bit Model | **New: Prism ML- Model** | [📦 LLM-TTS-STT.sh](BrainBug-Startdateien/TBonsai8B-TTS-STT.sh) |
+| **v2.0** | 🚀 1.58-Bit Model | **Prism ML- LLM + Whisper & Piper + XL Kontextfenster** | [📦 LLM-TTS-STT.sh](BrainBug-Startdateien/TBonsai8B-TTS-STT.sh) |
 
 <!-- > **Neu:** Du hast ein neues Modell gefunden? Einfach eine neue Zeile in der Tabelle oben einfügen!-->
 
