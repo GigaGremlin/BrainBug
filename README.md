@@ -14,7 +14,7 @@
 ## 📌 Das Konzept<br>
 Da ich für mein Home Assistant und die verbundenen **Voice Assistenten** gerne eine
 lokale Ki nutzen wollte, ist dieses Projekt entstanden.<br>
-**BrainBug** ist als KI-Zentrale für mein Smart Home gedacht. <br>Dank des **NVIDIA Jetson Orin Nano** und moderner **LLM Modelle** ist es möglich High-End Performance auf lokaler Hardware zu realisieren.
+**BrainBug** ist als KI-Zentrale für mein Smart Home gedacht. <br>Dank des **NVIDIA Jetson Orin Nano** und moderner **LLM Modelle** ist es möglich High-End Performance auf lokaler Hardware zu realisieren.<br><br> **Update:** BrainBug läuft jetzt mit **Ternary-Bonsai-8B.gguf**
 
 ---
 
